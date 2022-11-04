@@ -79,10 +79,11 @@ db.on("connected", function () {
 - set up our .env file with variables for OAuth
 
 ```
-  DATABASE_URL="mongodb://localhost/myprojectdb"
-  GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
-  GOOGLE_CLIENT_ID=GET IT FROM GOOGLE
-  GOOGLE_CLIENT_SECRET=GET IT FROM GOOGLE
+DATABASE_URL=YOUR VALUE HERE
+GOOGLE_CALLBACK=http://localhost:3000/oauth2callback
+GOOGLE_CLIENT_ID=YOUR VALUE HERE
+GOOGLE_SECRET=YOUR VALUE HERE
+SECRET=YOUR VALUE HERE
 ```
 
 ### Getting .env values from Google Cloud Developer Console
