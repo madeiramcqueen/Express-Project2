@@ -4,6 +4,17 @@
     <body>
         <%- include('../partials/navbar') %>
         <h1>Class Subjects</h1>
+        <p>
+            <% subjects.forEach(function(s) { %>
+                <ul>
+                    <li>
+                        <a href="/subjects/<%= s.id %>">
+                        <%= s.name %>
+                    </a>
+                    </li>
+                </ul>
+           <% }); %>
+        </p>
         <a href="/subjects/new">Add A Subject</a>
     </body>
 

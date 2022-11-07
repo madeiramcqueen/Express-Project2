@@ -5,7 +5,10 @@ var subjectsCtrl = require("../controllers/subjects");
 //Get the Subjects page
 router.get('/', subjectsCtrl.index);
 
-//Make a new skill
+//Make a new skill on form
 router.get('/new', subjectsCtrl.new);
+
+//Create a new skill
+router.post('/', subjectsCtrl.create);
 
 module.exports = router;

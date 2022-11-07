@@ -2,7 +2,8 @@ const Subject = require("../models/subject");
 
 module.exports = {
     index,
-    new: newSubject
+    new: newSubject,
+    create
 };
 
 function index(req, res) {
@@ -13,4 +14,11 @@ function index(req, res) {
 
 function newSubject(req, res) {
     res.render('subjects/new', {title: "New Subject"})
+}
+
+function create(req, res) {
+    Subject.create(req.body)
+    //test
+    console.log(req.body)
+    res.redirect('/subjects')
 }
