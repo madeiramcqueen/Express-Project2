@@ -11,4 +11,7 @@ router.get('/new', subjectsCtrl.new);
 //Create a new skill
 router.post('/', subjectsCtrl.create);
 
+//Show subject resources page
+router.get('/:id', subjectsCtrl.show);
+
 module.exports = router;
