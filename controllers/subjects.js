@@ -19,8 +19,6 @@ function newSubject(req, res) {
 
 function create(req, res) {
     Subject.create(req.body)
-    //test
-    console.log(req.body)
     res.redirect('/subjects')
 }
 

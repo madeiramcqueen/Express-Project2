@@ -11,9 +11,13 @@
     <%- include('../partials/navbar') %>
     <section id="show-page">
         <h1> <%= subject.name %> Resources Page </h1>
-        <div>Subject: </div>
-        <div> <%= subject.name %>
-        </div>
+<form action="/" method="POST">
+    <input type="text" name="resources">
+    <button type="submit">Add Resource Name</button>
+    <input type="text" name="url">
+    <button type="submit">Add URL</button>
+    <input type="text" name="notes">
+    <button type="submit">Add Notes</button>
     </section>
     
 </body>
