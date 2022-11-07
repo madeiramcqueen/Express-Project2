@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// connect to online mongoDB server
 mongoose.connect(process.env.DATABASE_URL);
 
 // shortcut to mongoose.connection object
