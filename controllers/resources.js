@@ -5,10 +5,15 @@ module.exports = {
 };
 
 function create(req, res) {
-    Subject.findById(req.params.id), function (err, subject) {
+    console.log('resources create', req.params.id)
+    //find the subject requested by id
+    Subject.findById(req.params.id, function (err, subject) {
+        //add the new resource to resource array
         subject.resources.push(req.body)
-        subject.save(function(err){
-            res.redirect("subjects/show")
+        //save
+        subject.save(function (err) {
+            //show on subject page
+            res.redirect(`/subjects/${subject._id}`)
         })
-    }
+    })
 }

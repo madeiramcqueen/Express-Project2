@@ -4,13 +4,14 @@ var router = express.Router();
 var subjectsCtrl = require("../controllers/subjects");
 var resourcesCtrl = require("../controllers/resources");
 
+//all urls start with /
 //Get the Subjects page
 router.get('/', subjectsCtrl.index);
 
-//Make a new skill on form
+//Make a new subject on form
 router.get('/new', subjectsCtrl.new);
 
-//Create a new skill
+//Create a new subject
 router.post('/', subjectsCtrl.create);
 
 //Show subject resources page
