@@ -5,7 +5,6 @@ module.exports = {
 };
 
 function create(req, res) {
-    console.log('resources create', req.params.id)
     //find the subject requested by id
     Subject.findById(req.params.id, function (err, subject) {
         //add the new resource to resource array
