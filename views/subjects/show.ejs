@@ -15,7 +15,17 @@
                 <h1>
                     <%= subject.name %> Resources Page
                 </h1>
-                <form action="/subjects"<%= subject._id %> method="POST">
+                <div>
+                    <label> Name: </label>
+                </div>
+                <div>
+                    <label> Url: </label>
+                </div>
+                <div>
+                    <label> Additional Notes: </label>
+                </div>
+
+                <form action="/subjects" <%=subject._id %> method="POST">
                     <input type="text" name="resources">
                     <button type="submit">Add Resource Name</button>
                     <input type="text" name="url">
