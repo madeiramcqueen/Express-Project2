@@ -12,8 +12,15 @@
                         <%= s.name %>
                     </a>
                     </li>
+                    <form action="/subjects/<%= s._id %>?_method=DELETE"
+                        class ="delete-form" method="POST">
+                        <button type="submit">X</button>
+                        </form>
                 </ul>
            <% }); %>
+
+
+
         </p>
         <a href="/subjects/new">Add A Subject</a>
     </body>

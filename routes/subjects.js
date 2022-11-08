@@ -20,4 +20,7 @@ router.get('/:id', subjectsCtrl.show);
 //Create a new resource for a subject
 router.post('/:id/resources', resourcesCtrl.create);
 
+//Delete a subject
+router.delete('/:id', subjectsCtrl.delete);
+
 module.exports = router;

@@ -4,7 +4,8 @@ module.exports = {
     index,
     new: newSubject,
     create,
-    show
+    show,
+    delete: deleteSubject
 };
 
 function index(req, res) {
@@ -26,4 +27,16 @@ function show(req, res) {
     Subject.findById(req.params.id, function (err, subject) {
         res.render('subjects/show', { title: "Subject Resource Page", subject })
     })
+}
+
+function deleteSubject(req, res) {
+    Subject.findByIdAndDelete(req.params.id, function(err, docs){
+        if (err) {
+            console.log(err)
+        } else {
+            console.log('Deleted subject', docs)
+            res.redirect('/subjects')
+        }
+    })
+
 }
