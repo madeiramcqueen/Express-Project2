@@ -9,6 +9,7 @@ const userSchema = new Schema(
       required: true,
     },
     email: String,
+    isAdmin: Boolean,
     avatar: String,
   },
   { timeStamps: true }
