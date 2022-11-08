@@ -17,6 +17,6 @@ router.post('/', subjectsCtrl.create);
 router.get('/:id', subjectsCtrl.show);
 
 //Create a new resource for a subject
-router.post('/', resourcesCtrl.create);
+router.post('/:id/resources', resourcesCtrl.create);
 
 module.exports = router;

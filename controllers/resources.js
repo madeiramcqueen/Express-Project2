@@ -8,7 +8,7 @@ function create(req, res) {
     Subject.findById(req.params.id), function (err, subject) {
         subject.resources.push(req.body)
         subject.save(function(err){
-            res.redirect(`/subjects/show${subject._id}`)
+            res.redirect("subjects/show")
         })
     }
 }
