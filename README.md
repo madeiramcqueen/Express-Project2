@@ -1,5 +1,5 @@
 # Project 2: Express CRUD APP
-# *Our Clas Online Learning Resources In One Place*
+## *Our Class Online Learning Resources In One Place*
 :pencil2: :books: :computer:
 
 ## ERD
