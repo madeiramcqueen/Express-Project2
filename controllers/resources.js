@@ -28,9 +28,15 @@ function edit(req, res) {
 
 function update(req, res) {
     Subject.findById(req.params.subjectId, function (err, subject) {
-        console.log(subject.resources.length)
-        //test
-        subject.resources[0].name = 'Madeira'
+        subject.resources.forEach(function (r) {
+            if (req.params.resourceId == r._id) {
+                r.name = req.body.name
+                r.url = req.body.url
+                r.notes = req.body.notes
+            }
+
+        })
+
         subject.save(function (err) {
             res.redirect(`/subjects/${subject._id}`)
         })
