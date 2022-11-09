@@ -32,6 +32,5 @@ function show(req, res) {
 function deleteSubject(req, res) {
     Subject.findByIdAndDelete(req.params.id, function (err, docs) {
         res.redirect('/subjects')
-    }
-    )
+    })
 }

@@ -1,5 +1,4 @@
 var express = require("express");
-const subjects = require("../controllers/subjects");
 var router = express.Router();
 var subjectsCtrl = require("../controllers/subjects");
 var resourcesCtrl = require("../controllers/resources");
