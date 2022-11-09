@@ -4,7 +4,7 @@ var subjectsCtrl = require("../controllers/subjects");
 var resourcesCtrl = require("../controllers/resources");
 
 
-//all urls start with /
+//All urls start with /
 //Get the Subjects page
 router.get('/', subjectsCtrl.index);
 

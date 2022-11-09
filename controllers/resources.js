@@ -34,16 +34,11 @@ function update(req, res) {
                 r.url = req.body.url
                 r.notes = req.body.notes
             }
-
         })
 
         subject.save(function (err) {
             res.redirect(`/subjects/${subject._id}`)
         })
     })
-    console.log(req.params.subjectId, req.params.resourceId);
-    // Resource.findById(req.params.id, function (err, resource) {
-    //     resource.save('resources/edit', { title: "Edit Resource Page", resource })
-    // res.redirect(`/subjects/${r._id}`)
 }
 
