@@ -30,13 +30,8 @@ function show(req, res) {
 }
 
 function deleteSubject(req, res) {
-    Subject.findByIdAndDelete(req.params.id, function(err, docs){
-        if (err) {
-            console.log(err)
-        } else {
-            console.log('Deleted subject', docs)
-            res.redirect('/subjects')
-        }
-    })
-
+    Subject.findByIdAndDelete(req.params.id, function (err, docs) {
+        res.redirect('/subjects')
+    }
+    )
 }
