@@ -25,6 +25,7 @@
                         <div>
                             <label> Additional Notes: <%= r.notes %> </label>
                         </div>
+                        <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
                         <% }); %>
 
                             <form action="/subjects/<%=subject._id %>/resources" method="POST">
@@ -36,7 +37,7 @@
                                 <textarea name="notes"></textarea>
                                 <button type="submit">Add Resource</button>
             </section>
-            <a href="/subjects/<%= subject._id %>/edit">Edit Subject</a>
+
 
     </body>
 

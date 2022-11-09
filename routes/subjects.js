@@ -3,6 +3,7 @@ var router = express.Router();
 var subjectsCtrl = require("../controllers/subjects");
 var resourcesCtrl = require("../controllers/resources");
 
+
 //all urls start with /
 //Get the Subjects page
 router.get('/', subjectsCtrl.index);
@@ -23,6 +24,9 @@ router.post('/:id/resources', resourcesCtrl.create);
 router.delete('/:id', subjectsCtrl.delete);
 
 //Edit a resource
-router.get('/:id/edit', subjectsCtrl.edit);
+router.get('/:subjectId/resources/:resourceId/edit', resourcesCtrl.edit);
+
+//Update the resource with its edits
+router.put('/:subjectId/resources/:resourceId', resourcesCtrl.update);
 
 module.exports = router;
