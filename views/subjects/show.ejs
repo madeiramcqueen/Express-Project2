@@ -18,24 +18,24 @@
 
                 <% subject.resources.forEach(function(r) { %>
                     <div>
-                        <label> Name: <%= r.name %> </label>
+                        <label class="resources"> Name: <%= r.name %> </label>
                         <div>
-                            <label> Url: <%= r.url %> </label>
+                            <label class="resources"> Url: <%= r.url %> </label>
                         </div>
                         <div>
-                            <label> Additional Notes: <%= r.notes %> </label>
+                            <label class="resources"> Additional Notes: <%= r.notes %> </label>
                         </div>
                         <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
                         <% }); %>
 
                             <form action="/subjects/<%=subject._id %>/resources" method="POST">
-                                <label>Name:</label>
+                                <label class="resources">Name:</label>
                                 <textarea name="name"></textarea>
-                                <label>Url:</label>
+                                <label class="resources">Url:</label>
                                 <textarea name="url"></textarea>
-                                <label>Notes:</label>
+                                <label class="resources">Notes:</label>
                                 <textarea name="notes"></textarea>
-                                <button type="submit">Add Resource</button>
+                                <button type="submit" class="btn btn-dark">Add Resource</button>
             </section>
 
 

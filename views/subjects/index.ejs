@@ -18,7 +18,7 @@
                             </a>
 
                             <form action="/subjects/<%= s._id %>?_method=DELETE" class="delete-form" method="POST">
-                                <button type="submit">X</button>
+                                <button class="btn-close" aria-label="Close" type="submit"></button>
                             </form>
 
 
@@ -29,7 +29,7 @@
 
 
             </p>
-            <a href="/subjects/new">Add A Subject</a>
+            <a href="/subjects/new" class="btn btn-dark">Add A Subject</a>
     </body>
 
 </html>
