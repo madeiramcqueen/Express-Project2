@@ -11,13 +11,15 @@
 
     <body>
         <%- include('../partials/navbar') %>
-            <h1>Edit Resource</h1>
-            <form action="/subjects/<%= subjectId %>/resources/<%= resourceId %>?_method=PUT" method="POST">
-                <input type="text" placeholder="Name" name="name">
-                <input type="text" placeholder="Url" name="url">
-                <input type="text" placeholder="Notes" name="notes">
-                <button type="submit" class="btn btn-dark">Save Edits</button>
-            </form>
+            <% if (user) { %>
+                <h1>Edit Resource</h1>
+                <form action="/subjects/<%= subjectId %>/resources/<%= resourceId %>?_method=PUT" method="POST">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Url" name="url">
+                    <input type="text" placeholder="Notes" name="notes">
+                    <button type="submit" class="btn btn-dark">Save Edits</button>
+                </form>
+                <% } %>
     </body>
 
 </html>

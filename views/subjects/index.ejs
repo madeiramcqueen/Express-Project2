@@ -14,20 +14,21 @@
                         <div class="col-2 card" style="width: 18rem;"> <a href="/subjects/<%= s._id %>">
                                 <%= s.name %>
                             </a>
-
-                            <form action="/subjects/<%= s._id %>?_method=DELETE" class="delete-form" method="POST">
-                                <button class="btn-close" aria-label="Close" type="submit"></button>
-                            </form>
-
-
+                            <% if (user) { %>
+                                <form action="/subjects/<%= s._id %>?_method=DELETE" class="delete-form" method="POST">
+                                    <button class="btn-close" aria-label="Close" type="submit"></button>
+                                </form>
+                                <% } %>
                         </div>
                         <% }); %>
                 </div>
             </div>
             </p>
-            <div style="text-align:center">
-                <a href="/subjects/new" class="btn btn-dark">Add A Subject</a>
-            </div>
+            <% if (user) { %>
+                <div style="text-align:center">
+                    <a href="/subjects/new" class="btn btn-dark">Add A Subject</a>
+                </div>
+                <% } %>
     </body>
 
 </html>

@@ -20,7 +20,9 @@
                         <div>
                             <label class="resources"> Name: <%= r.name %> </label>
                             <div>
-                                <label class="resources"> Url: <%= r.url %> </label>
+                                <label class="resources"> Url: <a href='<%= r.url %>'>
+                                        <%= r.url %>
+                                    </a> </label>
                             </div>
                             <div>
                                 <label class="resources"> Additional Notes: <%= r.notes %> </label>
@@ -29,13 +31,13 @@
                             <% }); %>
                                 <form action="/subjects/<%=subject._id %>/resources" method="POST">
 
-                                        <label class="resources">Name:</label>
-                                        <textarea name="name"></textarea>
-                                        <label class="resources">Url:</label>
-                                        <textarea name="url"></textarea>
-                                        <label class="resources">Notes:</label>
-                                        <textarea name="notes"></textarea>
-                                        <button type="submit" class="btn btn-dark">Add Resource</button>
+                                    <label class="resources">Name:</label>
+                                    <textarea name="name"></textarea>
+                                    <label class="resources">Url:</label>
+                                    <textarea name="url"></textarea>
+                                    <label class="resources">Notes:</label>
+                                    <textarea name="notes"></textarea>
+                                    <button type="submit" class="btn btn-dark">Add Resource</button>
             </section>
 
 
