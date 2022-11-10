@@ -12,30 +12,30 @@
     <body>
         <%- include('../partials/navbar') %>
             <section id="show-page">
-                <h1>
-                    <%= subject.name %> Resources Page
-                </h1>
-
-                <% subject.resources.forEach(function(r) { %>
-                    <div>
-                        <label class="resources"> Name: <%= r.name %> </label>
+                <div style="text-align:center">
+                    <h1>
+                        <%= subject.name %> Resources Page
+                    </h1>
+                    <% subject.resources.forEach(function(r) { %>
                         <div>
-                            <label class="resources"> Url: <%= r.url %> </label>
-                        </div>
-                        <div>
-                            <label class="resources"> Additional Notes: <%= r.notes %> </label>
-                        </div>
-                        <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
-                        <% }); %>
+                            <label class="resources"> Name: <%= r.name %> </label>
+                            <div>
+                                <label class="resources"> Url: <%= r.url %> </label>
+                            </div>
+                            <div>
+                                <label class="resources"> Additional Notes: <%= r.notes %> </label>
+                            </div>
+                            <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
+                            <% }); %>
+                                <form action="/subjects/<%=subject._id %>/resources" method="POST">
 
-                            <form action="/subjects/<%=subject._id %>/resources" method="POST">
-                                <label class="resources">Name:</label>
-                                <textarea name="name"></textarea>
-                                <label class="resources">Url:</label>
-                                <textarea name="url"></textarea>
-                                <label class="resources">Notes:</label>
-                                <textarea name="notes"></textarea>
-                                <button type="submit" class="btn btn-dark">Add Resource</button>
+                                        <label class="resources">Name:</label>
+                                        <textarea name="name"></textarea>
+                                        <label class="resources">Url:</label>
+                                        <textarea name="url"></textarea>
+                                        <label class="resources">Notes:</label>
+                                        <textarea name="notes"></textarea>
+                                        <button type="submit" class="btn btn-dark">Add Resource</button>
             </section>
 
 
