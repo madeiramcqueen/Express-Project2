@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/header') %>
+<%- include('../partials/header') %>
+
     <body>
         <%- include('../partials/navbar') %>
-        <h1>Class Subjects</h1>
-        <p>
-            <% subjects.forEach(function(s) { %>
-                <ul>
-                    <li>
-                        <a href="/subjects/<%= s._id %>">
-                        <%= s.name %>
-                    </a>
-                    </li>
-                    <form action="/subjects/<%= s._id %>?_method=DELETE"
-                        class ="delete-form" method="POST">
-                        <button type="submit">X</button>
-                        </form>
-                </ul>
-           <% }); %>
+            <h1>Class Subjects</h1>
+            <p>
 
 
+            <div class="container text-center">
+                <div class="row justify-content-center">
 
-        </p>
-        <a href="/subjects/new">Add A Subject</a>
+                    <% subjects.forEach(function(s) { %>
+
+                        <div class="col-2"> <a href="/subjects/<%= s._id %>">
+                                <%= s.name %>
+                            </a>
+
+                            <form action="/subjects/<%= s._id %>?_method=DELETE" class="delete-form" method="POST">
+                                <button type="submit">X</button>
+                            </form>
+
+
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+
+
+            </p>
+            <a href="/subjects/new">Add A Subject</a>
     </body>
 
 </html>
