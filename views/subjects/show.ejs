@@ -21,27 +21,35 @@
                             <label class="resources"><b>Name:</b>
                                 <%= r.name %>
                             </label>
-                            <div>
-                                <label class="resources"> <b>Url:</b> <a href='<%= r.url %>'>
-                                        <%= r.url %>
-                                    </a> </label>
-                            </div>
-                            <div>
-                                <label class="resources"><b>Additional Notes:</b>
-                                    <%= r.notes %>
-                                </label>
-                            </div>
+                        </div>
+                        <div>
+                            <label class="resources"> <b>Url:</b> <a href='<%= r.url %>'>
+                                    <%= r.url %>
+                                </a> </label>
+                        </div>
+                        <div>
+                            <label class="resources"><b>Additional Notes:</b>
+                                <%= r.notes %>
+                            </label>
+                        </div>
+                        <% if (user && user.isAdmin) { %>
                             <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
-                            <% }); %>
-                                <form action="/subjects/<%=subject._id %>/resources" method="POST">
+                            <% } %>
 
-                                    <label class="resources">Name:</label>
-                                    <textarea name="name"></textarea>
-                                    <label class="resources">Url:</label>
-                                    <textarea name="url"></textarea>
-                                    <label class="resources">Notes:</label>
-                                    <textarea name="notes"></textarea>
-                                    <button type="submit" class="btn btn-dark">Add Resource</button>
+                                <% }); %>
+
+                                    <% if (user && user.isAdmin) { %>
+                                        <form action="/subjects/<%=subject._id %>/resources" method="POST">
+                                            <label class="resources">Name:</label>
+                                            <textarea name="name"></textarea>
+                                            <label class="resources">Url:</label>
+                                            <textarea name="url"></textarea>
+                                            <label class="resources">Notes:</label>
+                                            <textarea name="notes"></textarea>
+                                            <button type="submit" class="btn btn-dark">Add Resource</button>
+                                        </form>
+                                        <% } %>
+                </div>
             </section>
 
 
