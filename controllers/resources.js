@@ -20,18 +20,18 @@ function create(req, res) {
 }
 
 function edit(req, res) {
-    Subject.findOne({'resource.id':req.params.resourceId})
+    Subject.findOne({'resource.id':req.params.id})
     .then(function(subject){
-        const resource = subject.resources.id(req.params.resourceId)
-        res.render('resources/edit', { title: "Edit Resource Page", resource, subjectId: req.params.subjectId, resourceId: req.params.resourceId })
+        const resource = subject.resources.id(req.params.id)
+        res.render('resources/edit', { title: "Edit Resource Page", resource })
     })
 
 }
 
 function update (req, res) {
-    Subject.findOne({'resource.id':req.params.resourceId})
+    Subject.findOne({'resource.id':req.params.id})
     .then(function(subject){
-        const resource = subject.resources.id(req.params.resourceId)
+        const resource = subject.resources.id(req.params.id)
         resource.name = req.body.name
         resource.url = req.body.url
         resource.notes = req.body.notes

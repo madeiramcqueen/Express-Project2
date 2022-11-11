@@ -13,7 +13,7 @@
         <%- include('../partials/navbar') %>
             <% if (user) { %>
                 <h1>Edit Resource</h1>
-                <form action="/subjects/<%= subjectId %>/resources/<%= resourceId %>?_method=PUT" method="POST">
+                <form action="/resources/<%= resource.id %>?_method=PUT" method="POST">
                     <input type="text" value="<%= resource.name %>" name="name">
                     <input type="text" value="<%= resource.url %>" name="url">
                     <input type="text" value="<%= resource.notes %>" name="notes">

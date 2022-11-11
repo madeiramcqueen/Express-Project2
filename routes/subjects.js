@@ -23,10 +23,4 @@ router.post('/:id/resources', resourcesCtrl.create);
 //Delete a subject
 router.delete('/:id', subjectsCtrl.delete);
 
-//Edit a resource
-router.get('/:subjectId/resources/:resourceId/edit', resourcesCtrl.edit);
-
-//Update the resource with its edits
-router.put('/:subjectId/resources/:resourceId', resourcesCtrl.update);
-
 module.exports = router;
