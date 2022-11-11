@@ -18,14 +18,18 @@
                     </h1>
                     <% subject.resources.forEach(function(r) { %>
                         <div>
-                            <label class="resources"> Name: <%= r.name %> </label>
+                            <label class="resources"><b>Name:</b>
+                                <%= r.name %>
+                            </label>
                             <div>
-                                <label class="resources"> Url: <a href='<%= r.url %>'>
+                                <label class="resources"> <b>Url:</b> <a href='<%= r.url %>'>
                                         <%= r.url %>
                                     </a> </label>
                             </div>
                             <div>
-                                <label class="resources"> Additional Notes: <%= r.notes %> </label>
+                                <label class="resources"><b>Additional Notes:</b>
+                                    <%= r.notes %>
+                                </label>
                             </div>
                             <a href="/subjects/<%= subject._id %>/resources/<%= r._id %>/edit">Edit Resource</a>
                             <% }); %>

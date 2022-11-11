@@ -21,9 +21,7 @@ function create(req, res) {
 
 
 function edit(req, res) {
-    // Resource.findById(req.params.subjectId, function (err, subject) {
     res.render('resources/edit', { title: "Edit Resource Page", subjectId: req.params.subjectId, resourceId: req.params.resourceId })
-    // })
 }
 
 function update(req, res) {
