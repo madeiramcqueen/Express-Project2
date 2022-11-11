@@ -19,22 +19,20 @@ function create(req, res) {
     })
 }
 
-
 function edit(req, res) {
     res.render('resources/edit', { title: "Edit Resource Page", subjectId: req.params.subjectId, resourceId: req.params.resourceId })
 }
 
-function update(req, res) {
-    Subject.findById(req.params.subjectId, function (err, subject) {
-        subject.resources.forEach(function (r) {
-            if (req.params.resourceId == r._id) {
-                r.name = req.body.name
-                r.url = req.body.url
-                r.notes = req.body.notes
-            }
-        })
+function update (req, res) {
+    Subject.findOne({'resource.id':req.params.resourceId})
+    .then(function(subject){
+        const resource = subject.resources.id(req.params.resourceId)
+        resource.name = req.body.name
+        resource.url = req.body.url
+        resource.notes = req.body.notes
 
-        subject.save(function (err) {
+        subject.save(function(err) {
+            if (err) return res.redirect('/subjects')
             res.redirect(`/subjects/${subject._id}`)
         })
     })
