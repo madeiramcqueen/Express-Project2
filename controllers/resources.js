@@ -20,7 +20,12 @@ function create(req, res) {
 }
 
 function edit(req, res) {
-    res.render('resources/edit', { title: "Edit Resource Page", subjectId: req.params.subjectId, resourceId: req.params.resourceId })
+    Subject.findOne({'resource.id':req.params.resourceId})
+    .then(function(subject){
+        const resource = subject.resources.id(req.params.resourceId)
+        res.render('resources/edit', { title: "Edit Resource Page", resource, subjectId: req.params.subjectId, resourceId: req.params.resourceId })
+    })
+
 }
 
 function update (req, res) {
