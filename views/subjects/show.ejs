@@ -20,6 +20,7 @@
                         </h1>
 
                         <% subject.resources.forEach(function(r) { %>
+
                             <div class="col-6 card" style="width: 18rem;">
                                 <div>
                                     <label class="resources"><b>Name:</b>
@@ -36,25 +37,25 @@
                                         <%= r.notes %>
                                     </label>
                                 </div>
-
                             </div>
-                            <% if (user && user.isAdmin) { %>
+                                    <% if (user && user.isAdmin) { %>
+                                        <button class="btn-close" aria-label="Close" type="submit"></button></form>
 
-                                <a href="/resources/<%= r._id %>/edit">Edit Resource</a>
+                                        <a href="/resources/<%= r._id %>/edit">Edit Resource</a>
 
-                                <% } %>
-                                    <% }); %>
-                                        <% if (user && user.isAdmin) { %>
-                                            <form action="/subjects/<%=subject._id %>/resources" method="POST">
-                                                <label class="resources">Name:</label>
-                                                <textarea name="name"></textarea>
-                                                <label class="resources">Url:</label>
-                                                <textarea name="url"></textarea>
-                                                <label class="resources">Notes:</label>
-                                                <textarea name="notes"></textarea>
-                                                <button type="submit" class="btn btn-dark">Add Resource</button>
-                                            </form>
-                                            <% } %>
+                                        <% } %>
+                                            <% }); %>
+                                                <% if (user && user.isAdmin) { %>
+                                                    <form action="/subjects/<%=subject._id %>/resources" method="POST">
+                                                        <label class="resources">Name:</label>
+                                                        <textarea name="name"></textarea>
+                                                        <label class="resources">Url:</label>
+                                                        <textarea name="url"></textarea>
+                                                        <label class="resources">Notes:</label>
+                                                        <textarea name="notes"></textarea>
+                                                        <button type="submit" class="btn btn-dark">Add Resource</button>
+                                                    </form>
+                                                    <% } %>
                     </div>
                 </div>
             </section>
