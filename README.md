@@ -23,12 +23,13 @@ That's when I thought: Wouldn't it be nice to have all of my class's subjects an
 
 ### Technologies Used
 1. Express
-2. Node.js
+2. Node.js, ejs
 3. Mongoose & MongoDB
 4. OAuth
-5. HTML
-6. CSS
-7. Bootstrap
+5. JavaScript
+6. HTML
+7. CSS
+8. Bootstrap
 
 ### Next Steps
 One thing I'm continually learning is that you are never "done" working with your projects. There's always something more you can do. And just when you **think** you're done, something else pops up. For this project, I would like to find the time to continue styling this app where it actually loooks like a modern-day app anyone would be using and also would **want** to use. I am sure more functionality ideas will pop up too. Maybe an option for the user to rate a resource? I look forward to continue adding more to this as ideas come up.
