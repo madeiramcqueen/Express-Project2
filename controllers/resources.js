@@ -1,5 +1,7 @@
 const Subject = require("../models/subject");
 
+// Create, edit, update, and delete resource functions
+
 module.exports = {
     create,
     edit,

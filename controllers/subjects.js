@@ -1,5 +1,7 @@
 const Subject = require("../models/subject");
 
+// Create a new subject, show and delete subject functions
+
 module.exports = {
     index,
     new: newSubject,
